@@ -1,19 +1,60 @@
+<!--This file was created by Sara Pancheri, March 18 2022-->
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
+
         <meta name="viewport" content="width=device-width">
-        <title>lab9</title>
+
+        <title>Lab 9</title>
         
-		<!--put your external stylesheet links here-->
-		<link rel="stylesheet" href="css/styles.css">
+        <!--put your external stylesheet links here-->
+        <link rel="stylesheet" href="css/styles.css">
         
-		<!--you can also place internal styles here; you would place these within <style> tags-->
+        <!-- link to leaflet styles -->
+        <link rel="stylesheet" type="text/css" href="lib/leaflet/leaflet.css" />
+
+        <!-- link to leaflet scripts -->
+        <script type="text/javascript" src="lib/leaflet/leaflet.js"></script>
+
+        <!-- link to data -->
+        <script type="text/javascript" src="data/megacities.js"></script>
+
     </head>
 
     <body>
         <!--put your initial page content here-->
-		
+
+		<div id="div1">
+
+             <p><b>Q1: Comment out the first line of both your js and css files and inside this comment notation, add that the file was created by YOUR NAME, followed by the YEAR.</b><br>
+
+            <i>This was done inside the main.js, styles.css and the index.html files</i></p>
+           
+
+            <p><b>Q2: Why is the JS script loaded at the end of the html file and not the beginning like the stylesheet?</b><br>
+
+            <i>HTML loads from top to bottom (single-thread language, runs one command at a time) - the head will load first, followed by the body and then everything inside the body. If were to put the JS script in the head, the entire JS will load before the HTML. This would reduce the speed of loading of your page ( due to having to run all of JS before any of the HTML elements) as well as cause potential erros (there may be JS code that alters the HTML - but those HTML element won't yet be availble to alterate, due to being run after).</i></p>
+
+            <p><b>Q3: What is the onload method doing? Why is it good to load JavaScript in this way?</b><br>
+
+            <i>The onload method occurs when an object has been loaded. This method is usually used within the body element to execute a script after a web page has loaded all its content (such as images, scripts, CSS files, etc.)</i></p>
+
+
+            <p><b>Q4: Observe the JS code you pasted into main.js in the previous section: What is the data type of cityPop, and What type of objects does it contain? Finally, what Python data type do these objects resemble most?</b><br>
+
+            <i>The variable 'cityPop' is an <u>array</u> data type. Within this array, there are objects literals, that must be contained within Curly Brackets. In this case, there are strings ("city": "Madison") and numbers ("population": 594833) in this array. This ressembles Python's lists and dictionaries. The array would ressemble the list and the object literals inside would represent the dictionaires being defined.</i></p>
+
+        </div>
+
+        <br>
+
+        <div id="mapdiv">
+
+
+
+        </div>
         <!--you can also use this space for internal scripts; you would place these within <script> tags-->
 
         <!--put your external script links here-->
